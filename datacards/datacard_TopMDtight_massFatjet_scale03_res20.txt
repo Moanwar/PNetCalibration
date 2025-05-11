@@ -1,0 +1,21 @@
+imax 1 number of channels
+jmax 8 number of processes minus 1
+kmax * number of nuisance parameters 
+------------------------------------------------------------
+shapes * * ../signal_bkg_data.root TopMDtight_${PROCESS}_massFatjet TopMDtight_${PROCESS}_massFatjet_${SYSTEM}
+shapes data_obs * ../signal_bkg_data.root TopMDtight_SingleMuon_massFatjet
+------------------------------------------------------------
+bin bin1
+observation -1
+------------------------------------------------------------
+bin	bin1	bin1	bin1	bin1	bin1	bin1	bin1	bin1	bin1
+process	TTbarGenMatch	TTbarNoGen	SingleTopNoGen	WJets	QCD0b	QCD1b	QCD2b	QCD3b	QCD4b
+process	0	1	2	3	4	5	6	7	8
+rate	-1	-1	-1	-1	-1	-1	-1	-1	-1
+------------------------------------------------------------
+bkg_unc	lnN	-	1.5	1.5	1.5	1.5	1.5	1.5	1.5	1.5
+scale03	shape	1	-	-	-	-	-	-	-	-
+res20	shape	1	-	-	-	-	-	-	-	-
+
+# autoMCstats 
+* autoMCStats 500 1
